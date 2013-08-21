@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>CSSS: A brief introduction</title>
+        <link href="slideshow.css" rel="stylesheet" />
+        <link href="theme.css" rel="stylesheet" />
+        <link href="talk.css" rel="stylesheet" />
+        <script src="prefixfree.min.js"></script>
+    </head>
+    
+    <body data-duration="10">
+        <header id="intro" class="slide">
+            <h1>
+                <object data="logo.svg" width="100%" type="image/svg+xml">
+                    <img src="logo.png" alt="CSSS: CSS-based SlideShow System" />
+                </object>
+            </h1>
+            <p class="attribution">By Jesse</p>
+        </header>
+        <section>
+            <header class="slide">
+                <h1>Introduction</h1>
+            </header>
+            <section class="slide" title="Introduction">
+                <h2>Goal</h2>
+                <p>The purpose of this is jsut to aquaint you with the generally accepted nuts and bolts standards of html, css and js</p>
+                <p>There is a deeper discussion of code organization that branches fromt his, that is a bit out of scope here</p>
+                <ul>
+                    <li class="delayed">General Formatting</li>
+                    <li class="delayed">Html</li>
+                    <li class="delayed">Css</li>
+                    <li class="delayed">Js</li>
+                    <li class="delayed">Comparison</li>
+                </ul>
+            </section>
+            <section class="slide" title="Caveat">
+                <h2>Caveat Emptor</h2>
+                <p class="delayed">There seem to be more front end style guides than developers</p>
+                <p class="delayed">Style and standards for the front are a moving target.</p>
+                <p class="delayed">Sometimes 'The Industry' willfully breaks a standard to make a new one.</p>
+                <xmp class="delayed">... like the I tag
+                    <i></i>
+                </xmp>
+            </section>
+            <section class="slide" title="Out of Scope">
+                <p>Patterns and practices is overlapping, but ultimately a differnt talk - that takes a bit longer to discuss.</p>
+            </section>
+        </section>
+        <section>
+            <header class="slide">
+                <h1>Html/Css</h1>
+            </header>
+            <section class="slide" title="Html/Css">
+                <p>Some Relevant Guides</p>
+                <ul>
+                    <li class="delayed">
+                        <a href="http://paulrobertlloyd.com/about/styleguide/">Paul Robert lloyd</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="http://csswizardry.com/2012/04/my-html-css-coding-style/">Harry Roberts (wizardry)</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="http://coding.smashingmagazine.com/2008/05/02/improving-code-readability-with-css-styleguides/">Smashing Magazine</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml">Google</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="http://css-tricks.com/css-style-guides/">Thinkup</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="http://make.wordpress.org/core/handbook/coding-standards/css/">Wordpress</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="https://github.com/styleguide/css">Github</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="https://github.com/necolas/idiomatic-css">Idiomatic css (Necolas)</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="http://css-tricks.com/css-style-guides/">Smacss (J. Snook)</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="https://github.com/stubbornella/oocss/wiki">Object Oriented CSS (Sullivan 'Stubornella')</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="slide" title="Html/Css">
+                <p>Firstly : Use a Reset</p>
+                <p class="delayed">Most common and most used is the
+                    <a href="http://meyerweb.com/eric/tools/css/reset/">Meyer Reset</a>
+                </p>
+                <p class="delayed">
+                    <a href="http://necolas.github.io/normalize.css/">Normalize</a>is gaining traction</p>
+            </section>
+            <section class="slide" title="Html/Css">
+                <p>Nomenclature</p>
+                <ul>
+                    <li class="delayed">Html tags and css declarations and properties are lowercased. No uppercase.</li>
+                    <li class="delayed">
+                        <xmp>
+                            <!-- Nay -->
+                            <A Href="YAY.html"></A>
+                            <P CLASS="camelCASE? "></P>
+                        </xmp>
+                        <xmp>
+                            <!-- Yay! -->
+                            <img src="hawt_drizzle_muffins.png" alt="Tasty Noms" />
+                        </xmp>
+                    </li>
+                </ul>
+            </section>
+            <section class="slide" title="Html/Css">
+                <p>Nomenclature</p>
+                <ul>
+                    <li></li>
+                </ul>
+            </section>
+            <section class="slide" title="Html/Css">
+                <p>Nomenclature</p>
+                <ul>
+                    <li class="delayed">Indentation: Don't mix tabs and spaces. Many guides say use 4, others 2 spaces. Set your editor, and stick to it.</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <header class="slide">
+                <h1>JS</h1>
+            </header>
+            <section class="slide" title="JS">
+                <p>Some Relevant Guides</p>
+                <ul>
+                    <li class="delayed">
+                        <a href="http://contribute.jquery.org/style-guide/js/">jQuery Style Guide</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="http://wiki.jqueryui.com/w/page/12137737/Coding%20standards">jQuery UI Style Guide</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google js style guide</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="http://dojotoolkit.org/community/styleGuide">Dojo style guide</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="http://javascript.crockford.com/code.html">Crockford's Guide</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="https://github.com/rwaldron/idiomatic.js/">Idiomatic.js</a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <footer class="slide" title="The End">
+            <h2>The End</h2>
+        </footer>
+        <script src="slideshow.js"></script>
+        <script src="plugins/css-edit.js"></script>
+        <script src="plugins/css-snippets.js"></script>
+        <script src="plugins/css-controls.js"></script>
+        <script src="plugins/code-highlight.js"></script>
+        <script>
+            var slideshow = new SlideShow();
+
+            var snippets = document.querySelectorAll('.snippet');
+            for (var i = 0; i < snippets.length; i++) {
+                new CSSSnippet(snippets[i]);
+            }
+
+            var cssControls = document.querySelectorAll('.css-control');
+            for (var i = 0; i < cssControls.length; i++) {
+                new CSSControl(cssControls[i]);
+            }
+        </script>
+    </body>
+
+</html>
