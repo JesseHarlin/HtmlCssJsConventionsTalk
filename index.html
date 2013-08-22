@@ -116,14 +116,50 @@
             <section class="slide" title="Html/Css">
                 <p>Nomenclature</p>
                 <ul>
-                    <li></li>
+                    <li class="delayed">Always close tags. The parser will try to help you, but use good form.</li>
+                    <li class="delayed">Namspace your css. The dash has meaning (usually)</li>
+                    <li class="delayed">Html, use double versus single quotes (this iwll affect your js, believe it or not)</li>
+                    <li class="delayed">Use meaningful id and class names. DO not use presenational names</li>
+                    <xmp class="delayed">/*yes*/ .ui-widget-content /*no*/ .green-button .alt #SDFG-4567</xmp>
                 </ul>
             </section>
             <section class="slide" title="Html/Css">
-                <p>Nomenclature</p>
+                <p>Naming</p>
                 <ul>
                     <li class="delayed">Indentation: Don't mix tabs and spaces. Many guides say use 4, others 2 spaces. Set your editor, and stick to it.</li>
+                    <li class="delayed">Avoid qualifying ID and class names with type selectors Bad:
+                        <xmp>ul#example</xmp>Better:
+                        <xmp>#example</xmp>
+                    </li>
+                    <li class="delayed">Use shorthand properties where possible. (Css)</li>
                 </ul>
+            </section>
+            <section class="slide" title="Html/Css">
+                <p>On Brevity</p>
+                <ul>
+                    <li class="delayed">Use shorthand properties where possible. (Css)</li>
+                    <li class="delayed">No:
+                        <xmp>margin-bottom: 45px; margin-left: auto; margin-right: 1em; /*Mixing measurements = double bad*/ margin-top: 0%;</xmp>
+                    </li>
+                    <li class="delayed">Yes:
+                        <xmp>margin: 0 auto 0 45px; /*or*/ margin: 0 auto; //omit units on zero</xmp>
+                    </li>
+                    <li class="delayed">You cal also express rgba(255,255,255)/ #ffffff as #fff,</li>
+                </ul>
+            </section>
+            <section class="slide" title="Html/Css">
+                <p>On Casing, wording</p>
+                <p class="delayed">Use hypens</p>
+                <p class="delayed">no: .myClassName</p>
+                <p class="delayed">no: .my_class_name</p>
+                <p class="delayed">yes: .my-class-name</p>
+                <p class="delayed">I've seen a lot of underscores out there for Id's, but rarely if ever, classes.</p>
+            </section>
+            <section class="slide" title="Html/Css">
+                <p class="delayed">Every Css prop needs a semicolon.</p>
+                <p class="delayed">Typically, there is a space between the selector and props, eg</p>
+                <xmp class="delayed">#yourid { margin-top: 1em; }</xmp>
+                <p class="delayed">Separate multiple selectors with commas</p>
             </section>
         </section>
         <section>
@@ -149,10 +185,114 @@
                         <a href="http://javascript.crockford.com/code.html">Crockford's Guide</a>
                     </li>
                     <li class="delayed">
+                        <a href="http://yui.github.io/yuidoc/">YUI DOCS</a>
+                    </li>
+                    <li class="delayed">
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MOzilla DOCS (MDN)</a>
+                    </li>
+                    <li class="delayed">
                         <a href="https://github.com/rwaldron/idiomatic.js/">Idiomatic.js</a>
                     </li>
                 </ul>
             </section>
+            <section class="slide" title="JS">
+                <p>Opinions</p>
+                <p class="delayed">Js style is a moving target</p>
+                <p class="delayed">There are many wildly differning opinions</p>
+                <p class="delayed">
+                    <a href="http://dailyjs.com/2012/04/19/semicolons/">Case in point :semicolons</a>
+                </p>
+                <p class="delayed">My opinion: Semicolons are GOOD</p>
+            </section>
+            <section class="slide" title="JS">
+                <p class="delayed">Best resource. is:
+                    <a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">Javascript patterns</a>
+                </p>
+            </section>
+            <section class="slide" title="JS">
+                <ul>
+                    <li class="delayed">Use Object literal Notation over traditioanl OO notation (constructors)</li>
+                </ul>
+            </section>
+            <section class="slide" title="JS">
+                <p>Yes!</p>
+                <xmp>var array = [];</xmp>
+                <xmp>var obj = [];</xmp>
+                <p>NO:</p>
+                <xmp>var array = new Array();</xmp>
+                <xmp>var obj = new Object();</xmp>
+            </section>
+            <section class="slide" title="JS">
+                <pre>
+                    //clean
+                    var obj = {prop1: 1, pro2: [1,2,3]};
+                    //dirty
+                    var obj = new Object();
+                    obj.prop1 = 1;
+                    obj.prop2 = new Array();
+                    obj.prop2[0] = 1 //and so on.
+                </pre>
+            </section>
+            <section class="slide" title="JS">
+                <p>But when you do, use Capitals for constructors</p>
+                <pre>
+                // constructor
+                    function Waffle() {
+                        this.tastes = "yummy";
+                    }
+                    // a new object
+                    var good_morning = new Waffle();
+                    console.log(typeof good_morning); // "object"
+                    console.log(good_morning.tastes); // "yummy"
+                    // antipattern:
+                    // forgotten `new`
+                    var good_morning = Waffle();
+                    console.log(typeof good_morning); // "undefined"
+                    console.log(window.tastes); // "yummy"
+                </pre>
+            </section>
+            <section class="slide" title="JS">
+                <p>Formatting</p>
+                <p class="slide">Do not mix spaces and tabs</p>
+                <p class="slide">brace at end of function line</p>
+                <p class="slide">Opinion: DO NOT OMIT BRACES</p>
+                <xmp class="slide">// bad practice for (var i = 0; i
+                    < 10; i +=1 ) alert(i); </xmp>
+            </section>
+            <section class="slide" title="JS">
+                <p>Globals</p>
+            </section>
+            <section class="slide" title="JS">
+                <p>Var pattern</p>
+            </section>
+            <section class="slide" title="JS">
+                <p>Loops</p>
+                <p class="slide">Various techniques, but they need to not eval the lenght as second param in loop</p>
+                <p class="slide">I recommend</p>
+                <pre class="slide">
+                for(var i=0, ii = junk.length; i < ii; i++){ 
+                    //do stuff
+                } </pre>
+            </section>
+            <section class="slide" title="JS">
+                <p>Has own property</p>
+                <pre class="delayed">for (var i in man) { if (Object.prototype.hasOwnProperty.call(man, i)) { console.log(i, ":", man[i]); } }</pre>
+            </section>
+            <section class="slide" title="JS">
+                <p>Using libs are good: eg underscore. _.each()</p>
+            </section>
+            <section class="slide" title="JS">
+                <p>Avoid eval, do not augment built in prototypes</p>
+            </section>
+            <section class="slide" title="JS">
+                <p class="slide">Read lot of code.</p>
+                <p class="slide">Minify only in production</p>
+                <p class="slide">Use linting tools</p>
+            </section>
+        </section>
+        <section class="slide" title="JS">
+            <p>Number conversion/ radix</p>
+            <p>year = parseInt(year, 10);</p>
         </section>
         <footer class="slide" title="The End">
             <h2>The End</h2>
